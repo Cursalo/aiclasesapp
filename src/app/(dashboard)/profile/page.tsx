@@ -31,8 +31,7 @@ export default function ProfilePage() {
       fullName: profile?.full_name || '',
       username: profile?.username || '',
       bio: profile?.bio || '',
-      website: profile?.website || '',
-      location: profile?.location || '',
+      websiteUrl: profile?.website_url || '',
     },
   })
 
@@ -228,33 +227,18 @@ export default function ProfilePage() {
                   )}
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="website">Website</Label>
-                    <Input
-                      id="website"
-                      type="url"
-                      placeholder="https://yourwebsite.com"
-                      {...register('website')}
-                      disabled={isSubmitting || isLoading}
-                    />
-                    {errors.website && (
-                      <p className="text-sm text-destructive">{errors.website.message}</p>
-                    )}
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="location">Location</Label>
-                    <Input
-                      id="location"
-                      placeholder="City, Country"
-                      {...register('location')}
-                      disabled={isSubmitting || isLoading}
-                    />
-                    {errors.location && (
-                      <p className="text-sm text-destructive">{errors.location.message}</p>
-                    )}
-                  </div>
+                <div className="space-y-2">
+                  <Label htmlFor="websiteUrl">Website</Label>
+                  <Input
+                    id="websiteUrl"
+                    type="url"
+                    placeholder="https://yourwebsite.com"
+                    {...register('websiteUrl')}
+                    disabled={isSubmitting || isLoading}
+                  />
+                  {errors.websiteUrl && (
+                    <p className="text-sm text-destructive">{errors.websiteUrl.message}</p>
+                  )}
                 </div>
 
                 <div className="flex justify-end space-x-4">
