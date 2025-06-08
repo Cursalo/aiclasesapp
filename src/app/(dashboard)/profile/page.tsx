@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useAuth } from '@/hooks/useAuth'
-import { profileUpdateSchema, type ProfileUpdateData } from '@/lib/validations'
+import { updateProfileSchema, type UpdateProfileData } from '@/lib/validations'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
@@ -25,8 +25,8 @@ export default function ProfilePage() {
     handleSubmit,
     formState: { errors, isSubmitting, isDirty },
     reset,
-  } = useForm<ProfileUpdateData>({
-    resolver: zodResolver(profileUpdateSchema),
+  } = useForm<UpdateProfileData>({
+    resolver: zodResolver(updateProfileSchema),
     defaultValues: {
       fullName: profile?.full_name || '',
       username: profile?.username || '',
@@ -36,7 +36,7 @@ export default function ProfilePage() {
     },
   })
 
-  async function onSubmit(data: ProfileUpdateData) {
+  async function onSubmit(data: UpdateProfileData) {
     try {
       setError(null)
       setSuccess(null)

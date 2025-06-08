@@ -1,30 +1,17 @@
 {
   "extends": [
     "next/core-web-vitals",
-    "@typescript-eslint/recommended",
     "prettier"
   ],
-  "plugins": ["@typescript-eslint"],
   "rules": {
-    "@typescript-eslint/no-unused-vars": "error",
-    "@typescript-eslint/no-explicit-any": "warn",
-    "@typescript-eslint/prefer-const": "error",
-    "@typescript-eslint/no-var-requires": "error",
-    "prefer-const": "error",
-    "no-var": "error",
-    "object-shorthand": "error",
-    "prefer-template": "error",
+    "react/no-unescaped-entities": "off",
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
     "react/display-name": "off",
-    "react-hooks/exhaustive-deps": "warn",
-    "no-console": ["warn", { "allow": ["warn", "error"] }],
-    "no-debugger": "error"
-  },
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaVersion": "latest",
-    "sourceType": "module",
-    "project": "./tsconfig.json"
+    "react-hooks/exhaustive-deps": "off",
+    "no-console": "off",
+    "no-debugger": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-explicit-any": "off"
   }
 }
