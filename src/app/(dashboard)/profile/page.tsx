@@ -44,8 +44,7 @@ export default function ProfilePage() {
         full_name: data.fullName,
         username: data.username,
         bio: data.bio,
-        website: data.website,
-        location: data.location,
+        website_url: data.websiteUrl,
       })
       
       setSuccess('Profile updated successfully!')
