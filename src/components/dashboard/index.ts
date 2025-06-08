@@ -1,0 +1,6 @@
+export { DashboardHeader } from './dashboard-header'
+export { ContinueLearning } from './continue-learning'
+export { RecentAchievements } from './recent-achievements'
+export { LearningGoals } from './learning-goals'
+export { RecommendedCourses } from './recommended-courses'
+export { QuickActions } from './quick-actions'
